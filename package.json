@@ -2,7 +2,7 @@
   "name": "jplist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://towhidcse4.github.io/",
+  "homepage": "https://towhidcse4.github.io/jpapp/",
   "scripts": {
     "dev": "next dev",            
     "build": "next build",       
