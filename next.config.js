@@ -1,16 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,            // Enables strict mode for React
-  swcMinify: true,                  // Minifies the code using SWC
-  output: 'export',                 // Tells Next.js to perform static export
-  trailingSlash: true,              // Ensures all routes have trailing slashes
+  reactStrictMode: true,
+  swcMinify: true,
+  output: 'standalone', // Make sure you're using standalone for dynamic apps or SSR
+  trailingSlash: true,
   images: {
-    unoptimized: true,              // Disables image optimization for static export
+    unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/jpapp/' : '', // Base path for GitHub Pages
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/jpapp/' : '', // Correct path for assets
   experimental: {
-    optimizePackageImports: ['@/components'],  // Experimental optimization for package imports
+    optimizePackageImports: ['@/components'],
   },
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
@@ -19,7 +17,7 @@ const nextConfig = {
         ignored: [
           '**/node_modules/**',
           '**/.git/**',
-          '**/public/typing-game/**',   // Ignores certain files for faster dev builds
+          '**/public/typing-game/**',
         ],
       };
     }
