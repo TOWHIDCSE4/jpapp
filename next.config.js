@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true,              // Disables image optimization for static export
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/jplist' : '', // Base path for GitHub Pages
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/jplist/' : '', // Correct path for assets
+  basePath: process.env.NODE_ENV === 'production' ? '/jpapp/' : '', // Base path for GitHub Pages
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/jpapp/' : '', // Correct path for assets
   experimental: {
     optimizePackageImports: ['@/components'],  // Experimental optimization for package imports
   },
